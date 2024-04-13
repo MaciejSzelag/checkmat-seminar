@@ -12,6 +12,11 @@ html {
     font-family: "Antonio", sans-serif;
 
 }
-// body {
-//     overflow: hidden;
-// }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.active-menu-body {
+    overflow: hidden;
+}
