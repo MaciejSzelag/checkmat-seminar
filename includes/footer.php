@@ -8,12 +8,14 @@
             </ul>
         </div>
         <div class="foot">
-            <p>Copyright&copy; 2024 bjjplymouth | Designed and developed: <a href="https://maciejszelag.co.uk">Maciej
+            <p>Copyright&copy; <?php if (date("Y") == 2024) {echo date("Y");} else {echo "2024 -" . date("Y");}
+;?> bjjplymouth | Designed and developed: <a href="https://maciejszelag.co.uk">Maciej
                     Szelag</a></p>
         </div>
     </footer>
     <!-- footer  -->
-    <script src="js/script.js"></script>
+    <script src="<?php $folderPath;if (!empty($folderPath)) {echo $folderPath . "assets/js/script.js";} else {echo "assets/js/script.js";}
+;?>"></script>
 </body>
 
 </html>

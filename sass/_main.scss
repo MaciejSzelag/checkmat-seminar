@@ -30,70 +30,96 @@ body::-webkit-scrollbar {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     z-index: 1000;
     padding: 4rem;
-    animation: intro-hide 2s 8s ease-in-out 1 both;
+    animation: intro-hide 2s ease-in-out 1 both;
+    z-index: 101;
 
-    .intro-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(255, 255, 255);
-        animation: intro-in-out 8s ease-in-out 1 both;
+    // .intro-bg {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     // background-color: rgb(255, 255, 255);
+    //     animation: intro-in-out 2s ease-in-out 1 both;
 
+    // }
+
+    // .intro-bg:nth-child(odd) {
+    //     background-color: rgb(0, 0, 0);
+    // }
+    // .intro-bg:nth-child(1) {
+    //     animation-delay: .2s;
+    // }
+
+    // .intro-bg:nth-child(2) {
+    //     animation-delay: .3s;
+    // }
+
+    // .intro-bg:nth-child(3) {
+    //     animation-delay: .4s;
+    // }
+
+    // .intro-bg:nth-child(4) {
+    //     animation-delay: .5s;
+    // }
+
+    // .intro-bg:nth-child(5) {
+    //     animation-delay: .6s;
+    // }
+
+
+    // .intro-text {
+    //     position: relative;
+    //     color: rgb(0, 0, 0);
+    //     font-size: 3vh;
+
+    // }
+}
+
+
+.add-animation {
+    animation: intro-hide-a .8s ease-in-out 1 both;
+
+    // .intro-bg {
+    //     animation: intro-in-out 1.4s ease-in-out 1 both;
+
+    // }
+}
+
+
+@media screen and (min-width:1200px) {
+    .intro {
+        .intro-text {
+
+            font-size: 8vh;
+
+        }
     }
 
-    .intro-bg:nth-child(odd) {
-        background-color: black;
-    }
-
-    .intro-bg:nth-child(1) {
-        animation-delay: .2s;
-    }
-
-    .intro-bg:nth-child(2) {
-        animation-delay: .3s;
-    }
-
-    .intro-bg:nth-child(3) {
-        animation-delay: .4s;
-    }
-
-    .intro-bg:nth-child(4) {
-        animation-delay: .5s;
-    }
-
-    .intro-bg:nth-child(5) {
-        animation-delay: .6s;
-    }
-
-
-
-    .intro-text {
-        position: relative;
-        color: rgb(255, 255, 255);
-        font-size: 5vh;
-
-    }
 }
 
 @keyframes intro-in-out {
     0% {
+
         transform: translateY(100%);
     }
 
-    10% {
+    30% {
         transform: translateY(0);
     }
 
+
+
     80% {
+
         transform: translateY(0);
     }
 
     100% {
+
         transform: translateY(-100%);
     }
 }
@@ -101,29 +127,45 @@ body::-webkit-scrollbar {
 @keyframes intro-hide {
     0% {
         top: 0;
-        opacity: 1;
+        // opacity: 1;
     }
 
 
+
+    // 45% {
+    //     // opacity: 1;
+    // }
 
     45% {
-        opacity: 1;
-    }
-
-    85% {
-        opacity: 0;
+        // opacity: 0;
         top: 0;
     }
 
-    90% {
-        opacity: 0;
+    99% {
+        // opacity: 0;
         top: -100vh;
 
     }
 
     100% {
-        opacity: 0;
+        // opacity: 0;
         top: -100vh;
         display: none;
     }
+}
+
+@keyframes intro-hide-a {
+    0% {
+        top: 100vh;
+        // opacity: 1;
+    }
+
+
+
+    100% {
+        // opacity: 0;
+        top: 0;
+        // display: none;
+    }
+
 }

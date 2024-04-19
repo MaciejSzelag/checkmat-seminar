@@ -17,7 +17,8 @@ if (empty($tabTitle)) {
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Vina+Sans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="<?php $folderPath;if (!empty($folderPath)) {echo $folderPath . "css/style.min.css";} else {echo "css/style.min.css";}
+;?>">
 </head>
 
 <body>
