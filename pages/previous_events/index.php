@@ -1,4 +1,4 @@
-<?php $folderPath = "../../";
+<?php $folderPath = "../";
 $tabTitle = " Previous Seminars | Checkmat ";include $folderPath . "includes/head.php";?>
 <?php include $folderPath . "includes/intro.php";?>
     <!-- navigation  -->
