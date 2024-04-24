@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// font-family: "Antonio",sans-serif;
+// font-family: "Anton", sans-serif;
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(236, 236, 236);
+
+}
+
+.admin-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    .head-navigation,
+    .onside-navigation {
+        position: absolute;
+        background-color: rgb(41, 41, 41);
+        color: white;
+    }
+
+    .head-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $adminNavHeight;
+        padding: 0 1rem;
+
+        .item-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: auto;
+            height: 100%;
+            // padding: .5rem;
+
+            .item-container {
+
+                // font-size: 2rem;
+
+                ul {
+                    display: flex;
+                    padding-right: 1rem;
+
+                    li {
+                        list-style: none;
+                        margin: .5rem;
+
+
+                        a {
+                            display: inline;
+                            color: white;
+                            padding: 1rem;
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            border-radius: .5rem;
+                            box-shadow: 0 0 .3rem .1rem rgba(255, 255, 255, 0.301);
+                            transition: .3s ease-in-out;
+
+                            i {
+                                margin-right: 1rem;
+                            }
+
+                            .i-no-margin {
+                                margin-right: 0 !important;
+                            }
+                        }
+                    }
+
+                    li:hover {
+                        a {
+                            background-color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+
+                    .s-active {
+                        display: none;
+                    }
+
+                    .m-s-active {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .onside-navigation {
+        top: $adminNavHeight;
+        left: -$onSideWidth;
+        width: $onSideWidth;
+        height: calc(100vh - $adminNavHeight);
+        background-color: rgb(36, 36, 36);
+
+        .list-wrap {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                margin-top: 3rem;
+                // background-color: green;
+
+                li {
+
+                    width: 90%;
+                    height: auto;
+                    list-style: none;
+                    margin: .5rem 0;
+                    border-radius: 5rem;
+                    transition: .2s linear;
+
+
+                    a {
+                        display: inline;
+                        display: block;
+                        color: white;
+                        padding: 1rem 2rem;
+                        text-decoration: none;
+                        font-size: 1.4rem;
+
+                        // box-shadow: 0 0 .3rem .1rem rgba(255, 255, 255, 0.301);
+                        transition: .3s ease-in-out;
+
+                        transform: translateX(0);
+
+                        i {
+                            margin-right: 1rem;
+                            transform: translateX(0);
+                            transition: .3s ease-in-out;
+                        }
+
+
+                    }
+
+                }
+
+                li:hover {
+                    transform: scale(1.1);
+                    box-shadow: inset 0 0 .2rem .1rem $colorRed;
+
+                    a {
+                        // background-color: rgba(168, 0, 0, 0.493);
+
+                        transform: translateX(1rem);
+
+                        i {
+                            transform: translateX(-1rem);
+                            color: rgba(37, 219, 0, 0.623);
+                            ;
+                        }
+                    }
+                }
+
+                .s-active {
+                    display: none;
+                }
+
+                .m-s-active {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .admin-navigation {
+
+
+        .head-navigation,
+        .onside-navigation {
+            // position: absolute;
+            // background-color: rgb(36, 36, 36);
+        }
+
+        .head-navigation {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: $adminNavHeight;
+            background-color: rgb(168, 0, 0);
+            padding: 0 3rem;
+            z-index: 1;
+
+            .item-wrap {
+
+
+                .item-container {
+                    font-size: 1.6rem;
+
+                    ul {
+                        display: flex;
+
+                        li:hover {
+                            // background-color: rgba(255, 255, 255, 0.068);
+                        }
+
+                        .m-active {
+                            display: none;
+                        }
+
+                        .s-active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .onside-navigation {
+            left: 0;
+        }
+    }
+}

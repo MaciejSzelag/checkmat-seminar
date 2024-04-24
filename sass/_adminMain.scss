@@ -1,0 +1,271 @@
+.dashboard-home {
+    width: 100%;
+    // height: auto;
+    min-height: 100vh;
+
+
+    .dash-container {
+        width: 100%;
+        height: 100%;
+        margin-top: $adminNavHeight;
+        background-color: rgb(223, 223, 223);
+
+        .content-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: inset 0 0 1rem .1rem rgb(48, 48, 48);
+            // width: 100%;
+            // height: 100%;
+
+
+            .content-card {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                background-color: white;
+                // margin-top: 5rem;
+                width: 100%;
+                height: 100%;
+
+
+                .content-title {
+
+                    margin: 5rem 0;
+
+                    h1 {
+                        font-size: 2.5rem;
+
+                    }
+
+                }
+
+                .form-wrap {
+                    form {
+
+
+                        .input-group-wrap {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            width: 100%;
+
+                            .input-group {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                width: 90%;
+                                border: .1rem solid rgba(0, 0, 0, 0.048);
+                                border-radius: .5rem;
+                                margin-bottom: 1rem;
+                                padding: 0 1rem 1rem;
+
+                                label {
+                                    font-size: 1.5rem;
+                                    margin: 1rem 0;
+                                    font-weight: 700;
+                                }
+
+                                input {
+                                    width: 100%;
+                                    font-size: 1.5rem;
+                                    outline: none;
+                                    border: none;
+                                    padding: .5rem 1rem;
+                                    border-bottom: .1rem solid rgba(0, 0, 0, 0.281);
+                                    // text-align: center;
+                                }
+
+                                input:focus {
+                                    border-color: $colorRed;
+                                    color: $colorRed;
+                                }
+
+                                input::placeholder {
+                                    color: rgb(207, 207, 207);
+                                }
+
+                                input[type=file] {
+                                    border-bottom: none;
+                                    margin: 2rem;
+                                }
+
+                                input[type=file]::file-selector-button {
+                                    background-color: $colorRed !important;
+                                    border: .1rem solid $colorRed;
+                                    color: white;
+                                    padding: .5rem 1rem;
+                                    border-radius: .5rem;
+                                    transition: .2s linear;
+                                }
+
+                                input:hover[type=file]::file-selector-button {
+                                    background-color: white !important;
+
+                                    color: red;
+                                    padding: .5rem 1rem;
+                                    border-radius: .5rem;
+                                }
+
+
+                                textarea {
+                                    width: 100%;
+                                    border: none;
+                                    padding: .5rem;
+                                    font-family: "Roboto", sans-serif;
+                                    background-color: rgb(247, 247, 247);
+                                }
+
+
+                            }
+
+
+
+                            .input-group:hover {
+                                border: .1rem solid red;
+                            }
+
+                            .btn-sub {
+                                justify-content: center;
+                                align-items: center;
+                                border: none;
+
+
+                                input[type=submit] {
+                                    // width: 50%;
+                                    border: .1rem solid white;
+                                    border-radius: .5rem;
+                                    margin: 1rem;
+                                    padding: 1rem;
+                                    background-color: $colorRed;
+                                    color: white;
+                                    transition: .3s linear;
+                                }
+
+                                input:hover[type=submit] {
+                                    border: .1rem solid $colorRed;
+
+                                    background-color: white;
+                                    color: $colorRed;
+                                    cursor: pointer;
+                                }
+
+                            }
+
+                            .btn-sub:hover {
+                                border: none;
+
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                .table-wrap {
+                    width: 100%;
+                    min-height: 70vh;
+                    padding: .5rem;
+
+                    table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+
+
+                    }
+
+                    th {
+                        background-color: $colorRed;
+                        color: white;
+                    }
+
+                    td,
+                    th {
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        text-align: center;
+                        padding: .8rem;
+                        font-size: 1.2rem;
+                    }
+
+                    td {
+
+                        // display: flex;
+                        // justify-content: center;
+                        // align-items: center;
+                        a {
+                            background-color: $colorRed;
+                            color: white;
+                            text-decoration: none;
+                            padding: .5rem 1rem;
+                            border-radius: .5rem;
+
+                        }
+                    }
+
+                    tr:nth-child(odd) {
+                        background-color: rgba(0, 0, 0, 0.055);
+                    }
+
+                    tr:hover {
+                        background-color: rgb(253, 214, 214);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .dashboard-home {
+        width: 100%;
+        // height: 100vh;
+        min-height: 100vh;
+
+        .dash-container {
+            width: calc(100% - $onSideWidth);
+            margin-left: $onSideWidth;
+
+            .content-wrapper {
+                .content-card {
+                    width: 80%;
+                    height: auto;
+                    margin: $adminNavHeight 0;
+                    border-radius: .5rem;
+                    padding: 5rem;
+
+                    .content-title {
+
+                        h1 {
+                            font-size: 4rem;
+
+                        }
+
+                    }
+
+                    .form-wrap {
+                        form {
+                            .input-group-wrap {
+                                .input-group {
+                                    width: 45%;
+                                    margin: 1rem;
+
+                                    textarea {
+                                        // width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

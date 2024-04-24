@@ -31,16 +31,17 @@
 
                 <?php $link_path;if (empty($link_path)) {?>
                     <li><a href="#Home" class="delayedLink">Home</a></li>
-                    <li><a href="#Seminar-Details" class="delayedLink">Seminar Details</a></li>
                     <li><a href="pages/previous_events/" class="delayedLink">Previous Events</a></li>
                     <li><a href="#Contact" class="delayedLink">Contact</a></li>
+                    <li><a href="pages/login/" class="delayedLink">Login</a></li>
                 <?php } else {?>
                     <li><a href="<?php echo $link_path; ?>#Home" class="delayedLink">Home</a></li>
-                    <li><a href="<?php echo $link_path; ?>#Seminar-Details" class="delayedLink">Seminar Details</a></li>
                     <li><a href="<?php echo $link_path; ?>pages/previous_events/" class="delayedLink">Previous Events</a></li>
                     <li><a href="<?php echo $link_path; ?>#Contact" class="delayedLink">Contact</a></li>
+                    <li><a href="<?php echo $link_path; ?>pages/login/" class="delayedLink">Login</a></li>
 
                     <?php }?>
+                    <li><a href="admin">Admin</a></li>
                 </ul>
             </div>
 
