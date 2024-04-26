@@ -60,7 +60,6 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 <td><?php echo $bd_timestamp; ?></td>
 
                             </tr>
-
                         </table>
                     </div>
                 </div>
