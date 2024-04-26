@@ -46,17 +46,29 @@
                                 <h1>Bank details</h1>
                                 <div class="content">
                                     <table>
+                                        <?php
+
+$sql_query = "SELECT * FROM bank_details";
+$result = mysqli_query($conn, $sql_query);
+while ($row = mysqli_fetch_assoc($result)) {
+    $bd_name = $row["bd_name"];
+    $bd_sort_code = $row["bd_sort_code"];
+    $bd_account_number = $row["bd_account_number"];
+
+}
+
+?>
                                         <tr>
                                             <td>Name</td>
-                                            <td> R Bellingham</td>
+                                            <td><?php echo $bd_name; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Sort Code</td>
-                                            <td>09-01-28</td>
+                                            <td><?php echo $bd_sort_code; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Account Number</td>
-                                            <td>94354552</td>
+                                            <td><?php echo $bd_account_number; ?></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -70,15 +82,14 @@
                             <div class="box-content">
                                 <h1>Contact details</h1>
                                 <div class="content">
+
+
                                     <table>
-                                        <tr>
-                                            <!-- <td>Phone:</td> -->
-                                            <td> 07877 320658</td>
-                                        </tr>
-                                        <tr>
-                                            <!-- <td>e-mail:</td> -->
-                                            <td> checkmatplymouth@gmail.com</td>
-                                        </tr>
+                                       <?php
+findAllContactDetails();
+
+?>
+
                                     </table>
                                 </div>
                                 <div class="btn-wrap">

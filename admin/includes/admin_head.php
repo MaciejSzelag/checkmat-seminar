@@ -1,28 +1,8 @@
-<?php
-if (isset($_GET['source'])) {
-    $source = $_GET['source'];
-    $source = strtolower($source);
-} else {
-    $source = '';
-}
 
-//switch for tab name
-switch ($source) {
-    case "add-a-new-event";
-        $tab_title = "Add a New Event";
-        break;
-    case "table-all-events";
-        $tab_title = "All Events";
-        break;
-    case "bank-details-update";
-        $tab_title = "Update your bank details";
-        break;
-    default:
-        $tab_title = "Dashboard";
-        break;
+<?php include "../includes/db.php"?>
+<?php include "functions.php";?>
+<?php ob_start();?>
 
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
