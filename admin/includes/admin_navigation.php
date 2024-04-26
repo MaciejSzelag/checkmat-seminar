@@ -29,7 +29,7 @@
                     <li><a href="../admin/"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
                     <li><a href="index.php?source=add-a-new-event"><i class="fa-solid fa-plus"></i>Add Event</a></li>
                     <li><a href="index.php?source=table-all-events"><i class="fa-solid fa-calendar-days"></i>All Events</a></li>
-                    <li><a href=""><i class="fa-solid fa-money-check"></i>Bank details</a></li>
+                    <li><a href="index.php?source=bank-details-update"><i class="fa-solid fa-money-check"></i>Bank details</a></li>
 
                 </ul>
             </div>

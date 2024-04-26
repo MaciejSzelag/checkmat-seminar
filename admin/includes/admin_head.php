@@ -14,6 +14,9 @@ switch ($source) {
     case "table-all-events";
         $tab_title = "All Events";
         break;
+    case "bank-details-update";
+        $tab_title = "Update your bank details";
+        break;
     default:
         $tab_title = "Dashboard";
         break;

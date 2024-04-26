@@ -8,6 +8,21 @@ switch ($source) {
     case "table-all-events";
         include "includes/all_events.php";
         break;
+    case "bank-details-update";
+        include "includes/bank_details.php";
+        break;
+    case "update-upcoming-event";
+        include "includes/update_upcoming_event.php";
+        break;
+    case "update-bank-details";
+        include "includes/update_bank_details.php";
+        break;
+    case "update-event-prices";
+        include "includes/update_event_prices.php";
+        break;
+    case "update-contact-details";
+        include "includes/update_contact_details.php";
+        break;
     default:
         include "includes/dashboard.php";
         break;
